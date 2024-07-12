@@ -1,6 +1,6 @@
 # 25ji-gen
 Generate photos with a 25_ji_nightcord_de style!
-
+站点：[25时生成器](https://25ji.netlify.app/)
 ## 前言/Preface
 
 14岁初中生desu，完全不会前端、web的说。随便手搓个玩玩。所以说一些代码丑之类的问题就不要介意啦）
