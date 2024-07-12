@@ -7,10 +7,12 @@ function loadDefaultPhoto(){
     img.setAttribute('crossOrigin', 'anonymous');
     img.onload = function() {
         // Draw after loaded
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        canvas.width = 637;
+        canvas.height = 247;
+        ctx.drawImage(img, 0, 0);
     };
 
-    img.src = './25logo_jp.png';
+    img.src = './images/25logo_jp.png';
 
 //---------download part---------
     var saveBtn = document.getElementById('saveBtn');
@@ -26,17 +28,4 @@ function loadDefaultPhoto(){
         // 下载
         link.click();
     });
-}
-
-function download(selector){
-    const canvas = document.querySelector(selector);
-
-    // a tag
-    const el = document.createElement('a');
-    // 设置 href 为图片经过 base64 编码后的字符串，默认为 png 格式
-    el.href = canvas.toDataURL();
-    el.download = '25logo.png';
-    // 创建一个点击事件并对 a 标签进行触发
-    const event = new MouseEvent('click');
-    el.dispatchEvent(event);
 }

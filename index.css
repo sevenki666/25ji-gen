@@ -1,6 +1,18 @@
 @font-face {
 	font-family: "Sang";
-	src: url("./ShangShouFangTangTi-2.ttf");
+	src: url("./fonts/ShangShouFangTangTi-2.ttf");
+}
+@font-face {
+    font-family: "shsSC";
+    src: url("./fonts/SourceHanSerifSC-VF.ttf");
+}
+@font-face {
+    font-family: "shsTC";
+    src: url("./fonts/SourceHanSerifTC-VF.ttf");
+}
+@font-face {
+    font-family: "shsJP";
+    src: url("./fonts/SourceHanSerif-VF.ttf");
 }
 .title {
 	font-size: 50px;
@@ -10,7 +22,7 @@
 	color: #884499;
 }
 #photoDisplay {
-
+    display: block;
 }
 /* 按钮样式 */
 .genButton {

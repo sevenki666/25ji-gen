@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,22 +7,24 @@
 	<link rel="stylesheet" href="./about.css">
 	<link rel="icon" href="./favicon.ico">
 	<script type="text/javascript" src="./index.js"></script>
+	
 	<title>25时生成器</title>
 </head>
 <body onload="loadDefaultPhoto()">
 	<p class="title">ProjectSEKAI 25时生成器</p>
 	<center>
-		<canvas id="photoDisplay" width="637" height="247">
+		<canvas id="photoDisplay">
 		</canvas>
-		<div>
-			<input name="text" class="input" placeholder="输入你的文本！">
+		<p/>
+		<form id="summon" onsubmit="genPhoto(event)">
+			<input name="text" id="inputField" class="input" placeholder="输入你的文本！">
 			<p/><p/>
-		</div>
-		<div>
-			<button class="genButton">点击生成</button>
-			<button class="genButton" id="saveBtn">点击下载</button>
-		</div>
-
+			<button class="genButton" type="submit">点击生成</button>
+		</form>
+		<p id="test"></p>
+		<button class="genButton" id="saveBtn">点击下载</button>
+	
+		<p/>
 		<!-- 打开弹窗按钮 -->
 		<button id="aboutBtn" class="mrTop">关于</button>
 		 
@@ -40,7 +42,7 @@
 		        <p>网站发起者：<a href="https://github.com/sevenki666/">Sevenki</a>.</p>
 		        <p>参与开发的成员：Sevenki</p>
 		        <a href="https://github.com/sevenki666/25ji-gen">项目地址</a>
-		        <p>项目中的 25logo_jp.png、25logo_zh.png 等，版权归其合法所有者所有，包括但不限于 Sega、Colorful Palette 和 Crypton。 本网站仅用于个人学习研究，与Sega或Colorful Palette没有官方关系。</p>
+		        <p>项目中的 25logo_jp.png、25logo_zh.png 等，版权归其合法所有者所有，包括但不限于 Sega、Colorful Palette。 本网站仅用于个人学习研究，与Sega或Colorful Palette没有官方关系。</p>
 		        <p>项目中除了上述文件，其他文件均适用 The MIT License。</p>
 		        <p>如果您对该项目有问题、建议，欢迎在 Github 上提出 Issue/PR，或者通过 <a href="https://space.bilibili.com/566794905">Bilibili</a> 联系我。</p>
 		      </div>
@@ -50,5 +52,6 @@
 		</div>
 	</center>
 	<script type="text/javascript" src="./about.js"></script>
+	<script type="text/javascript" src="./gen.js"></script>
 </body>
 </html>
